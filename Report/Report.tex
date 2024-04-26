@@ -1,0 +1,162 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{Sanfrancisco crime prediction using Python and Machine Learning}
+\author{Abia Abraham,Rahulkrishnan,Sarang KJ}
+\date{April 24, 2024}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Abstract}
+\begin{frame}{Abstract}
+\section{Introduction}
+This project aims to develop a crime category classifier based on machine learning models using data from 12 years of crime reports in San Francisco. The dataset includes information such as timestamps, crime categories, descriptions, locations, and resolution methods. The objective is to predict the category of crime based on eight characteristics, including time, location, and day of the week.
+
+The project follows a full Data Science life cycle, starting with Data Exploration to clean the dataset and gain insights into variable relationships. Feature Engineering is then employed to create additional features that may enhance model performance. Finally, the dataset is split into training and testing sets for model evaluation and hyperparameter tuning.
+
+By analyzing and modeling the dataset, this project seeks to contribute to the understanding of crime patterns in San Francisco, potentially aiding law enforcement agencies in resource allocation and crime prevention efforts
+\end{frame}
+
+
+\section{Introduction}
+\begin{frame}{Introduction}
+  Crime prediction has emerged as a vital tool in enhancing public safety, particularly in urban areas like San Francisco. In this presentation, we explore how machine learning techniques can be leveraged to forecast crime patterns and allocate resources effectively.
+\end{frame}
+
+\section{Literature review}
+\begin{frame}{Literature review}
+For the purpose of our project is the prediction of crimes in San Francisco
+\begin{itemize}
+    \item Category of Crime: 
+    Studies analyze distinct crime types like theft, assault, and drug offenses in San Francisco, highlighting unique spatial and temporal patterns.
+    \item Description of Incidents: 
+    Natural language processing extracts meaningful features from crime incident narratives, revealing common modus operandi and contextual factors.
+    \item Police District Analysis: 
+    Research explores how socio-economic factors and law enforcement resources across police districts influence crime rates and predictive model effectiveness
+    \item Resolution of Incidents: 
+    Predictive models consider factors like timely police response and community engagement for successful crime resolution
+    \item Address-Level Analysis: 
+    Geospatial techniques identify crime hotspots and clustering patterns at the address level, informing targeted intervention strategies.
+\end{itemize}
+\end{frame}
+\section{Methodology}
+\begin{frame}{Methodology}
+
+Data Collection: Gather historical crime data from reliable sources, such as official police reports or government databases, covering a significant timeframe to capture diverse patterns.
+Data Preprocessing:
+Cleaning: Handle missing values, outliers, and inconsistencies in the dataset to ensure data integrity.
+Exploratory Data Analysis (EDA):
+Explore the dataset to uncover patterns, trends, and correlations between variables.
+Visualize data distributions and relationships using plots,colormaps, and heatmaps.
+Gain insights into the temporal and spatial distribution of crimes across different neighborhoods and time periods.
+Feature Engineering:
+Model Selection and Training:
+Choose appropriate machine learning algorithms for classification tasks, considering factors such as model complexity, interpretability, and performance.
+Split the dataset into training and testing sets to evaluate model performance.
+Train multiple models, including but not limited to decision trees, random forests, 
+Model Evaluation and Optimization:
+Assess the performance of trained models using evaluation metrics such as accuracy, precision, recall.
+
+
+
+
+\end{frame}
+
+
+\section{Implementation}
+\begin{frame}{Implementation}
+\begin{itemize}
+ \item  \textbf{Data Collection}:
+ Obtain historical crime data for San Francisco. You can find such datasets on websites like Kaggle 
+\item \textbf{Data Preprocessing:} 
+Clean the data, handle missing values, and convert categorical variables into numerical format if needed. You may also want to engineer features that could be useful for prediction, such as time of day, day of the week, or proximity to certain locations.
+\item \textbf{Model Selection:} 
+Choose a machine learning algorithm suitable for your prediction task. Some popular choices for classification tasks like crime prediction include Random Forest,
+\item \textbf{Model Training:}
+Split your data into training and testing sets. Train your chosen model on the training data.
+\item \textbf{Model Evaluation:}
+Evaluate the performance of your model using appropriate metrics such as accuracy, precision, recall. You can also use techniques like cross-validation for a more robust evaluation.
+
+  \end{itemize}
+\end{frame}
+\section{Results and Discussions}
+\begin{frame}{Results and Discussions}
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{||c | c | c | c | c||} 
+ \hline
+ Model No: & Model name & Precision & Accuracy & Recall \\ 
+ \hline
+ 1 & Logistic Regression & .888 & .800 & .888 \\ 
+ 2 & Decision Tree & .796 & .801 & .801 \\
+ 3 & Random Forest & .933 & .750 & .777\\
+ \hline
+ \end{tabular}
+\end{table}
+From the table we find that the Decision tree is  more accurate than Logistic Regression and Random Forest with an accuracy of 80.1\% ,precision of 79.6\% and Recall score of 80.1\%.the dataset with 878049 data rows and 9 columns,we can predict the crime with an accuracy of 80.1\%
+There has been found to be many
+variables with high co-linearity and through analysis of the data we have found the core components to be used
+to obtain an accurate prediction about the crime.From this we can find that the Decision tree has more balanced and higher score than the rest of the models.
+
+    
+\end{frame}
+
+\section{plots}
+\begin{frame}
+\centering
+\textbf{San Francisco crime incidents}
+\begin{figure}
+    
+    \includegraphics[width=0.30\linewidth]{crime_prediction.png}
+    \label{fig:enter-label}
+\end{figure}
+\textbf{Bar chart crime category proportion by year}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.35\linewidth]{BAR_chart_crime-category.png}
+    \label{fig:enter-label}
+\end{figure}
+\textbf{Bar Plot for records by pdDistrict}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.35\linewidth]{BP_PDISTRICT.png}
+    \label{fig:enter-label}
+\end{figure}
+
+ 
+\end{frame}
+
+
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+ In conclusion, leveraging machine learning for crime prediction offers significant potential to enhance public safety in San Francisco. By employing data-driven approaches, we can empower law enforcement agencies to allocate resources efficiently and proactively address crime challenges.
+ 
+\end{frame}
+\section{Reference}
+\begin{frame}{Reference}
+  To construct a dependable crime prediction model, a robust dataset containing labeled articles is indispensable. Fortunately, numerous online platforms offer such datasets, including the San Francisco crime prediction dataset available on Kaggle.
+  \begin{itemize}
+    
+  
+  
+ \item \textbf{George saavedra} : \href{}{ https://www.kaggle.com/code/georgesaavedra/sanfrancisco-crime-eda-classifier}
+ \item \textbf{Donwany} :san-francisco-crime-prediction 
+ \href{}{https://github.com/donwany/San-Francisco-Crime-Prediction}
+ \item \textbf{IEEE Explore}:Crime Data Analysis and Prediction of Perpetrator Identity Using Machine Learning Approach 
+ \href{}{https://ieeexplore.ieee.org/document/8553904}
+
+
+
+\end{itemize}
+\end{frame}
+
+
+\end{document}
